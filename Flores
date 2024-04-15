@@ -1,0 +1,26 @@
+class Flor {
+    private String nome;
+
+    public Flor(String nome) {
+        this.nome = nome;
+    }
+
+    public void exibirNome() {
+        System.out.println("Esta flor se chama " + nome);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Criando várias flores com o nome "Livia"
+        Flor[] flores = new Flor[5];
+        for (int i = 0; i < flores.length; i++) {
+            flores[i] = new Flor("Livia");
+        }
+
+        // Exibindo o nome de cada flor
+        for (int i = 0; i < flores.length; i++) {
+            flores[i].exibirNome();
+        }
+    }
+}
