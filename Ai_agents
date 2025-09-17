@@ -857,29 +857,8 @@
         "          \"É possível reembolsar certificações do Google Cloud?\",\n",
         "          \"Posso obter o Google Gemini de graça?\",\n",
         "          \"Qual é a palavra-chave da aula de hoje?\",\n",
-        "          \"Quantas capivaras tem no Rio Pinheiros?\"]"
-      ],
-      "metadata": {
-        "id": "WJITX7YQ-flq"
-      },
-      "execution_count": null,
-      "outputs": []
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "import time\n",
-        "for msg_test in testes:\n",
-        "    resposta_final = grafo.invoke({\"pergunta\": msg_test})\n",
-        "\n",
-        "    triag = resposta_final.get(\"triagem\", {})\n",
-        "    print(f\"PERGUNTA: {msg_test}\")\n",
-        "    print(f\"DECISÃO: {triag.get('decisao')} | URGÊNCIA: {triag.get('urgencia')} | AÇÃO FINAL: {resposta_final.get('acao_final')}\")\n",
-        "    print(f\"RESPOSTA: {resposta_final.get('resposta')}\")\n",
-        "    if resposta_final.get(\"citacoes\"):\n",
-        "        print(\"CITAÇÕES:\")\n",
-        "        for citacao in resposta_final.get(\"citacoes\"):\n",
-        "            print(f\" - Documento: {citacao['documento']}, Página: {citacao['pagina']}\")\n",
+
+        "         print(f\" - Documento: {citacao['documento']}, Página: {citacao['pagina']}\")\n",
         "            print(f\"   Trecho: {citacao['trecho']}\")\n",
         "\n",
         "    print(\"------------------------------------\")\n",
